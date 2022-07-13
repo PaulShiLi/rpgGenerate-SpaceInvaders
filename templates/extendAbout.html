@@ -1,0 +1,68 @@
+{% extends "about.html" %}
+
+{% block modelTrainingInfo %}
+<script src="{{ url_for('static',filename='/js/about.js') }}"></script>
+<div class="u-clearfix u-sheet u-sheet-1">
+<div class="row justify-content-center" id="tabModel">
+  <button class="btn btn-primary mx-auto d-block" id="modelName" onclick="openModel_info(event, 'personality')">Personality</button>
+  <button class="btn btn-primary mx-auto d-block" id="modelName" onclick="openModel_info(event, 'lore')">Lore</button>
+  <button class="btn btn-primary mx-auto d-block" id="modelName" onclick="openModel_info(event, 'trait')">Trait</button>
+</div>
+<!-- Tab content -->
+<div class="row justify-content-center" id="tabModel_Content">
+    <div id="personality" class="modelContent">
+      <h3>Personality Model</h3>
+      <p>
+          Model Training Time: 02:30:00 <br>
+          Steps: 50,000 <br>
+          Batch Size: 8 <br>
+          <br>
+          <br>
+          GPU: NVIDIA Tesla K80
+      </p>
+    </div>
+
+    <div id="lore" class="modelContent">
+      <h3>Lore Model</h3>
+      <p>
+          1st training: <br>
+          Model Training Time: 18:50:22 <br>
+          Steps: 110,000 <br>
+          Batch Size: 180 <br>
+          <br>
+          2nd training: <br>
+          Model Training Time: 20:56:54 <br>
+          Steps: 120,000 <br>
+          Batch Size: 180 <br>
+          <br>
+          <br>
+          GPU: NVIDIA Tesla V100
+      </p>
+    </div>
+
+    <div id="trait" class="modelContent">
+      <h3>Trait Model</h3>
+      <p>
+          Model Training Time: 04:08:00 <br>
+          Steps: 80,000 <br>
+          Batch Size: 64 <br>
+          <br>
+          <br>
+          GPU:  NVIDIA Tesla P100 PCIe
+      </p>
+    </div>
+</div>
+</div>
+<script>
+    /* Make 1st tab button activate */
+    tablinks = document.querySelectorAll("#modelName")[0]
+    tablinks.className += " active";
+    /* Hide all tab content */
+    tabcontent = document.getElementsByClassName("modelContent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    /* Show tab content only for the 1st tab content */
+    document.getElementById("personality").style.display = "block";
+</script>
+{% endblock modelTrainingInfo %}

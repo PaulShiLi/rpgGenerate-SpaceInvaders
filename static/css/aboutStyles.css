@@ -1,0 +1,50 @@
+/* Styling for tabs regarding modeling */
+
+/* Style the tab */
+#tabModel {
+  display: flex;
+  overflow: hidden;
+  border: none;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+#tabModel button {
+  background-color: #e1e1e1;
+  border: 1px solid #a4a4a4;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-family: "Arial Black";
+  overflow: auto;
+  height: auto;
+  width: 7%;
+}
+
+/* Change background color of buttons on hover */
+#tabModel button:hover {
+  background-color: #6bb9ff;
+  color: #ffffff;
+}
+
+/* Create an active/current tablink class */
+#tabModel button.active {
+  background-color: #5b9cd7;
+  color: #ffffff;
+}
+
+#tabModel>#modelName:not(:last-child){
+  margin-right: 10%;
+}
+
+#tabModel_Content>.modelContent {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
