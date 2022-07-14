@@ -6,57 +6,60 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>About</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/crescent.ico') }}" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/static/css/aboutPage.css" rel="stylesheet" />
+        <!--<link href="{{ url_for('static', filename='css/aboutStyles.css') }}" rel="stylesheet" />-->
+        <link href="{{ url_for('static', filename='css/aboutPage.css') }}" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">Test our Product</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">About the Product</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar" id="mainNav">
+          <div class="nav-container">
+              <div class="navbar-brand">
+                  <a class="nav-logo" href="home.html">Nexus</a>
+                  <img src="{{ url_for('static', filename='img/moon.png') }}" alt="moon" class="moon" height="26" />
+              </div>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <div class="navbar-nav">
+                      <div class="nav-item">
+                          <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                      </div>
+                      <div class="nav-item">
+                          <a class="nav-link active" href="{{url_for('about')}}">About Us</a>
+                      </div>
+                      <div class="nav-item">
+                          <a class="nav-link" href='https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders'> GitHub </a>
+                      </div>
+                      <div class="nav-item">
+                          <a class="nav-link" href="{{url_for('playground')}}">Playground</a>
+                      </div>
+                  </div>
+              </div>
+            </div> 
         </nav>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('/static/img/img/about-bg.jpg')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="page-heading">
-                            <h1>About Us</h1>
-                            <span class="subheading">Here's a little bit about us!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
         <!-- Main Content-->
         <main class="mb-4">
+        <header>
+              <h1 class="title">
+                   <span class="gradient">About us<br /></span>
+              </h1>
+              <p class="description">
+                  Here's a little bit about us!
+              </p>
+          </header> 
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="paragraph">
                         <p>We are a passionate team of high school students interested in computer science and artificial intelligence.</p>
-                        <em>TL;DR: We built a super cool RPG character generator using Python and it took a long time to train and build. Check it out <a href="#">here</a>.</em>
+                        <em style= "color: #e3e3e3">TL;DR: We built a super cool RPG character generator using Python and it took a long time to train and build. Check it out <a href="#">here</a>.</em>
                         <p>Our product generates role-playing game characters complete with names, backstories, physical descriptions, and personality traits. The purpose of this product is to create unique fantasy characters that can be used in a variety of situations. It can be utilized when creating characters for a novel or in role playing games like Dungeons and Dragons. It can be as inspiration in fantasy storytelling, by giving you a starting point for a character that you can expand from. This AI was also made for fun. In the future, we could expand this to create character portrait images, game stats, equipment, and other interesting details that would make the characters come to life.</p>
                         <p>Our product was built using Python and GPT-2. The personality traits model dataset took information from D&D rulebooks, data generated from GPT-3, and a couple websites that listed RPG personality traits. The backstory model used a dataset containing sample backstories from Elden Ring, fantasy characters, and GPT-3 generated backstories. The physical description model used descriptions generated by GPT-3. Some datasets, like the physical descriptions and personality traits, were very hard to create because there was not very much information available on these subjects. Because of this, we produced some data with GPT-3 using a prompt.</p>
                         <p>Here was our process:</p>
-                        <img src="../static/img/img/process.png" width="100%" height="12%">
+                        <img src="{{ url_for('static', filename='img/process.png') }}" width="100%" height="12%">
                         <p>The first step was to gather data. Since we wanted to generate backstories, physical descriptions, and personality traits, we had to create 3 different data sets and train 3 different AI models. The personality traits model dataset took information from D&D rulebooks, data generated from GPT-3, and a couple of websites that listed character personality traits. The backstory model used a dataset containing sample backstories from Elden Ring, fantasy characters, and GPT-3 generated backstories. The physical description model used descriptions generated by GPT-3. Some datasets, like the physical descriptions and personality traits, were very hard to create because there was limited information available on these subjects. Because of this, we produced some data with GPT-3 using a prompt.</p>
                         <p>The second step was to clean up the data. Since we were collecting data from multiple sources, we had to organize all of the data into 3 text files containing the backstories, physical descriptions, and personality traits. Then, we added start and end tokens to the beginning and end of each sentence to train the AI model on how to start and finish sentences.</p>
                         <p>The third step was to train our AI models. The tools we used were Open AI Playground, Cocalc, and Google Colab. We used Distil GPT-2 to train our model because it was the most efficient for this project. The personality traits AI model took 2 hours and 30 minutes to train with 50,000 steps and a batch size of 8. The physical descriptions AI model took 4 hours and 8 minutes to train with 80,000 steps and a batch size of 64. The backstories AI model took the longest amount of training; 16 hours and 17 minutes to train with 50,000 steps and a batch size of 64.</p>
@@ -67,43 +70,16 @@
                 </div>
             </div>
         </main>
-        {% block modelTrainingInfo %}
-        {% endblock %}
+
         <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
-                    </div>
-                </div>
-            </div>
+        <footer class="border-top" align = center>
+                <a href="https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders">
+                    <span class="fa-stack fa-lg" >
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            <div color = #e3e3e3 align = center>Nexus 2022</div>
         </footer>
 
 

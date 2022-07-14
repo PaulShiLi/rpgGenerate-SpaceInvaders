@@ -1,2 +1,12 @@
 @import "aboutStyles.css";
-@import "styles.css";
+@import "homestyles.css";
+
+.paragraph {
+    margin: auto;
+    justify-content: center;
+    padding: 1rem;
+}
+
+p {
+    color: #e3e3e3;
+}
