@@ -1,4 +1,0 @@
-training_time: 20:18:00
-steps: 110000
-batch_size: 180
-model: distilgpt2
