@@ -169,7 +169,36 @@
             </div>
         </section>
     </main>
-    <footer>&copy; 2022</footer>
+    <footer>
+        <div style="display: flex; align-content: center; justify-content: center; flex-direction: column;" >
+            <div class="brand">
+                <p class="nav-logo">Nexus</p>
+                <img src="{{ url_for('static', filename='img/crescent.png') }}" alt="moon" class="moon" height="32" />
+            </div>
+            <div style="margin: 0 0 2rem 0; display: flex; justify-content: center; align-content: space-between;">
+                
+                <div class="j">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <div class="navbar-nav">
+                            <div class="nav-item">
+                                <a class="nav-link active" href="{{url_for('home')}}">Home</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="{{url_for('about')}}">About Us</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href='https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders'>GitHub</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href="{{url_for('playground')}}">Playground</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

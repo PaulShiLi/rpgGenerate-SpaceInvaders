@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Where dreams begin.</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <title>Nexus</title>
+    <link rel="icon" type="image/x-icon" href="static/crescent.ico" />
     <!-- Font Awesome icons -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
     <!-- Stylesheet -->
     <link href="{{ url_for('static', filename='css/homestyles.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
 
 
 <body>
@@ -32,9 +33,7 @@
                     <div class="nav-item">
                         <a class="nav-link" href="{{url_for('about')}}">About Us</a>
                     </div>
-                    <div class="nav-item">
-                        <a class="nav-link" href='https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders'>GitHub</a>
-                    </div>
+                    
                     <div class="nav-item">
                         <a class="nav-link" href="{{url_for('playground')}}">Playground</a>
                     </div>
@@ -42,17 +41,18 @@
             </div>
         </div> 
     </nav>
-    <main>
+
+    <div class="main">
         <header>
             <h1 class="title">
-                Where <span class="gradient">dreams<br />begin.</span>
+                The creative tool <br/>for&nbsp;<span class="gradient typewrite" data-period="2000" data-type='[ "writers", "artists", "DND players", "roleplayers", "anyone", "developers", "the future", ""]' ></span>
             </h1>
-            <p class="description">
-                Create unique fantasy characters that can be used in a variety of situations! 
+            <p class="description" id="subtitle">
+                Nexus - the ultimate character-generating device
             </p>
             <div class="button-container">
-                <button class="button" onclick="window.location.href='playground.html';">Try Now</button>
-                <button class="button button-secondary" onclick="window.location.href='https://github.com/PaulShiLi/RPG_Generator';" >View Source</button>
+                <button class="button" onclick="window.location.href='{{url_for('playground')}}';">Try Now</button>
+                <button class="button button-secondary" href='https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders' >View Source</button>
             </div>
         </header> 
         <hr />
@@ -62,69 +62,72 @@
                 We had no imagination,
                 <span class="gradient">so we made a robot instead.</span>
             </h3>
-            <p>
-                When our creative juices run out, technology has our back. Nexus is here. Nexus is a tri-model 
+            <p class="description" style="margin: 0 16rem 0 0;">
+                When our creative juices run out, technology has our back. Nexus is here. Nexus is a tri-model engine powered by AI to generate character descriptions featuring 
+                personality traits, physical descriptions, and even backstories. 
             </p>
-        </section>
-
-        <section class="pictures">
-            <div class="user">
-                <img src="{{ url_for('static', filename='img/paul.png') }}" alt="Atlas" class="avatar" />
-                <h4>Paul</h4>
-                <p>
-                    Paul is a rising senior in Westlake Highschool at Westlake Village, California. Some of the hobbies that he loves include playing music, cybersecurity, and programming. He enjoyed partaking in the development of the AIs that were used for this project and in addition, all of the website development was really fun with the team.
-                </p>
-            </div>
-            <div class="user">
-                <img src="{{ url_for('static', filename='img/atlas.png') }}" alt="Atlas" class="avatar" />
-                <h4>Julian</h4>
-                <p>
-                    Julian is a rising junior with a passion for the future of technology. Bringing his experience from his work at Cloaks+, he primarily worked on front end: envisioning and developing the website's design and implementation. 
-
-                </p>
-            </div>
-            <div class="user">
-                <img src="{{ url_for('static', filename='img/kacper.png') }}" alt="Atlas" class="avatar" />
-                <h4>Kacper</h4>
-                <p>
-                    Kacper is a rising senior with a passion for computer science and math. He primarily worked on the back-end of the code, but also helped bring the front-end to life. In his free time he loves to program and play video games with his friends.
-                </p>
-            </div>
-            <div class="user">
-                <img src="{{ url_for('static', filename='img/nina.jpg') }}" alt="Atlas" class="avatar" />
-                <h4>Nina</h4>
-                <p>
-                    Nina is a rising senior from California. She has a passion for music, video games, and movies. She mostly worked on the front end of Nexus.  
-                </p>
-            </div>
-            <div class="user">
-                <img src="{{ url_for('static', filename='img/rifat.png') }}" alt="Atlas" class="avatar" />
-                <h4>Rifat</h4>
-                <p>
-                    Rifat is a rising senior in high school. He enjoys coding, playing soccer and basketball, playing video games, and watching movies. His favorite part about this project was being able to work as a team to learn and create an AI product.
-                </p>
-            </div>
-            <div class="user">
-                <img src="{{ url_for('static', filename='img/charlie.jpg') }}" alt="Atlas" class="avatar" />
-                <h4>Charlie</h4>
-                <p>
-                    Charlie is a rising junior that lives in New Jersey. He enjoys D&D, and brought some of these ideas to the AI Camp project. He worked on the personality trait dataset and model, as well as the front-end and back-end for the generation page.
-                </p>
-            </div>
-        </section>
+        </section> 
+        <hr>
+    </div>
+    <section class="pictures">
+        <div class="user">
+            <img src="{{ url_for('static', filename='img/paul.png') }}" alt="Atlas" class="avatar" />
+            <h4>Paul</h4>
+            <p class="description bio">
+                Paul is a rising senior in Westlake Highschool at Westlake Village, California. Some of the hobbies that he loves include playing music, cybersecurity, and pro-<br>gramming. He enjoyed partaking in the development of the AIs used for this project.
+            </p>
+        </div>
+        <div class="user">
+            <img src="{{ url_for('static', filename='img/atlas.png') }}" alt="Atlas" class="avatar" />
+            <h4>Julian</h4>
+            <p class="description bio">
+                Julian is a rising junior with a passion for the future of technology. Bringing his experience from his work at <a href="https://cloaksplus.com">Cloaks+</a>, he primarily worked on front end: envisioning and developing the website's design and implementation. 
+            </p>
+        </div>
+        <div class="user">
+            <img src="{{ url_for('static', filename='img/kacper.png') }}" alt="Atlas" class="avatar" />
+            <h4>Kacper</h4>
+            <p class="description bio">
+                Kacper is a rising senior with a passion for computer science and math. He primarily worked on the back-end of the code, but also helped bring the front-end to life. In his free time he loves to program and play video games with his friends.
+            </p>
+        </div>
+        <div class="user">
+            <img src="{{ url_for('static', filename='img/nina.jpg') }}" alt="Atlas" class="avatar" />
+            <h4>Nina</h4>
+            <p class="description bio">
+                Nina is a rising senior from California. She has a passion for music, video games, and movies. She mostly worked on the front end of Nexus, along with training the model for generating physical
+            </p>
+        </div>
+        <div class="user">
+            <img src="{{ url_for('static', filename='img/rifat.png') }}" alt="Atlas" class="avatar" />
+            <h4>Rifat</h4>
+            <p class="description bio">
+                Rifat is a rising senior in high school. He enjoys coding, playing soccer and basketball, playing video games, and watching movies. His favorite part about this project was being able to work as a team to learn and create an AI product.
+            </p>
+        </div>
+        <div class="user">
+            <img src="{{ url_for('static', filename='img/charlie.jpg') }}" alt="Atlas" class="avatar" />
+            <h4>Charlie</h4>
+            <p class="description bio">
+                Charlie is a rising junior that lives in New Jersey. He enjoys D&D, and brought some of these ideas to the AI Camp project. He worked on the personality trait dataset and model, as well as the front-end and back-end for the generation page.
+            </p>
+        </div>
+    </section>
+    
+    <div class="main" style="padding-top: 0;">
+        <hr>
         <aside class="right">
             <h3>
                 Helping writers
                 <span class="gradient">one character at a time.</span>
             </h3>
-            <p>
-                Need a name? Need a personality? Need a backstory? Need a physical description?
-                Nexus will give you a starting point for your character.
+            <p class="description" style="margin: 0 0 0 16rem;">
+                No creativity? No problem. Vexus is guaranteed to give you a starting point for your project. Nexus generates interesting and original characters for anyone to use.
             </p>
         </aside>
         <section class="news">
             <h3>Release <span class="gradient">1.0.0</span> Patch Notes</h3>
-            <p>
+            <p class="description" style="margin: 0 0 1rem 0;">
                 Nexus is released on the web! <br />
                 <br />
                 Nexus 1.0.0 is able to generate names, personalities, backstories, and physical descriptions. 
@@ -132,16 +135,19 @@
                 Personalities are one sentence descriptions. 
                 Backstories and physical descriptions are a few sentences long. 
                 <br /><br />
-                <a href="">Learn more...</a>
+                <a " href="{{url_for('about')}}">Learn more...</a>
             </p>
         </section>
+
+
+
         <section>
-            <h2>But <span class="gradient">how does it work?</span></h2>
+            <h1 class="title">But <span class="gradient">how does it work?</span></h1>
             <div class="how-does-work">
                 <article>
                     <h3>We threw some text at a robot...</h3>
-                    <p>
-                        We fed our machine a lot of text, now it spits out similar text! 
+                    <p class="description">
+                        Well, it's a bit more complicated than that. 
                     </p>
                 </article>
                 <article class="right">
@@ -149,16 +155,52 @@
                         But how does it
                         <span class="gradient">really</span> work?
                     </h3>
-                    <p>
+                    <p class="description">
                         We used Python, NLTK, Flask, GPT-3, and GPT-2 to make Nexus. 
                         Our text generation models are trained with Distil GPT-2 and datasets with over thousands of entries. 
                         The machine spends many hours processing the data, it learns to imitate what it was given. 
                     </p>
                 </article>
             </div>
+            <hr/>
+    
         </section>
-    </main>
-    <footer align = center>Nexus 2022</footer>
+
+    </div>
+    
+    
+    <footer>
+        <div style="display: flex; align-content: center; justify-content: center; flex-direction: column; margin: -4rem 0 0 0" >
+            <div class="brand">
+                <p class="footer-logo">Nexus</p>
+                <img src="{{ url_for('static', filename='img/crescent.png') }}" alt="moon" class="moon" height="42" />
+            </div>
+            <div style="margin: 0 0 2rem 0; display: flex; justify-content: center; align-content: space-between;">
+                
+                <div class="j">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <div class="navbar-nav">
+                            <div class="nav-item">
+                                <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href='https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders'>GitHub</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href='https://www.ai-camp.org/'>AI Camp</a>
+                            </div>
+                            <div class="nav-item">
+                                <a class="nav-link" href='https://beta.openai.com/'>OpenAI GPT-3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <hr>
+
+        </div>
+    </footer>
 </body>
 
 </html>
