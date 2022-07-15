@@ -38,6 +38,3 @@ Distil GPT-2
 * Numpy
 * AI Text Gen (atextgen)
 * Natural Language Toolkit (NLTK)
-
-
-This is the official github repo of the Space Invaders RPG Generator Project.
