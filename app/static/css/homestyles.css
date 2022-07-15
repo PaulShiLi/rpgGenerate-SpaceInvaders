@@ -13,7 +13,7 @@
 hr {
   border-color: #292929;
 }
-main {
+.main {
   max-width: 72rem;
   margin: 0 auto;
   padding-top: 4rem;
@@ -35,6 +35,13 @@ body {
   text-align: var(--bs-body-text-align);
   background-color: black;
 }
+
+.bio {
+  font-size: 14px !important; 
+  font-weight: 100 !important;
+  text-align: center !important;
+}
+
 button {
   outline: none;
   border: none;
@@ -44,11 +51,12 @@ h1, h2, h3, h4 {
   font-weight: 800;
   margin: 1rem 0;
 }
+
 h1, h2 {
   text-align: center;
 }
 h1 {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 h2 {
   font-size: 2.5rem;
@@ -58,10 +66,10 @@ h3 {
 }
 p {
   color: #7a7a7a;
-  font-weight: 600;
+  font-weight: 200;
 }
 section, aside {
-  margin: 6rem 0;
+  margin: 4rem 0;
 }
 .right {
   text-align: right;
@@ -75,23 +83,27 @@ section, aside {
 .how-does-work {
   display: flex;
   gap: 6rem;
+  margin: 4rem auto 8rem auto;
 }
 .how-does-work > article {
   width: 100%;
+  margin: 0 0 -4rem 0;
 }
 .pictures {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: top;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 2rem 8rem 2rem 8rem;
 }
 .pictures .user {
   text-align: center;
-  max-width: 10rem;
+  max-width: 14rem;
+  margin: -3rem 0 -4rem 0;
 }
 .pictures .user p {
-  font-size: 0.95rem;
+  font-size: 2rem;
 }
 .pictures .avatar {
   width: 8rem;
@@ -132,17 +144,40 @@ section, aside {
   align-items: center;
   gap: 1rem;
   padding-left: 2rem;
+
 }
+
+.navbar-brand p {
+  font-size: 4rem;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 4rem;
+}
+
 .nav-logo {
   color: white;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 600;
 }
+
+.footer-logo {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
 .nav-link {
   color: #7a7a7a;
   list-style: none;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 100;
 }
 .nav-link.active {
   color: white;
@@ -168,9 +203,10 @@ header {
   background-clip: text;
 }
 .description {
-  text-align: center;
-  padding: 20px;
-  max-width: 64rem;
+  /* text-align: center; */
+  /* padding: 20px; */
+  /* max-width: 64rem; */
+  font-weight: 200;
   margin: 0 0 0 0;
 }
 .button-container {
@@ -187,7 +223,7 @@ header {
   border-radius: 6px;
   background-color: white;
   color: black;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -196,11 +232,24 @@ header {
   -webkit-box-shadow: inset 0px 0px 0px 2px #ffffff;
   color: white;
 }
+
 .button-secondary {
   background-color: black;
   color: #7a7a7a;
   -webkit-box-shadow: inset 0px 0px 0px 3px #7a7a7a;
 }
+
 footer {
     color: #e3e3e3;
+    border-top: 2px #7a7a7a;
+    background-color: #000000;
+}
+
+#subtitle {
+  margin: 1rem 0 2rem 0;
+  font-size: 1rem;
+}
+
+#learnMore {
+  margin: 0 0 3rem 0;
 }

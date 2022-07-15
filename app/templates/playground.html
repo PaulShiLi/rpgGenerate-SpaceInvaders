@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>RPG Character Generator - Generation Page</title>
-        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='crescent.ico') }}" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar" id="mainNav">
-            <div class="nav-container">
-                <div class="navbar-brand">
-                    <a class="nav-logo" href="{{url_for('home')}}">Nexus</a>
-                    <img src="{{ url_for('static', filename='img/moon.png') }}" alt="moon" class="moon" height="26" />
-                </div>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <div class="navbar-nav">
-                        <div class="nav-item">
-                            <a class="nav-link" href="{{url_for('home')}}">Home</a>
-                        </div>
-                        <!-- <div class="nav-item">
-                            <a class="nav-link" href="about.html">News</a>
-                        </div> -->
-                        <div class="nav-item">
-                            <a class="nav-link" href="{{url_for('about')}}">About</a>
-                        </div>
-                <!--    <div class="nav-item">
-                            <a class="nav-link" href="{{url_for('playground')}}">How It Works</a>
-                        </div>     -->    
-                        <div class="nav-item">
-                            <a class="nav-link" href="https://github.com/PaulShiLi/rpgGenerate-SpaceInvaders">GitHub</a>
-                        </div>
-                        <div class="nav-item">
-                            <a class="nav-link active" href="{{url_for('playground')}}">Playground</a>
-                        </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>RPG Character Generator - Generation Page</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='crescent.ico') }}" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar" id="mainNav">
+        <div class="nav-container">
+            <div class="navbar-brand">
+                <a class="nav-logo" href="{{url_for('home')}}">Nexus</a>
+                <img src="{{ url_for('static', filename='img/moon.png') }}" alt="moon" class="moon" height="26" />
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="{{url_for('about')}}">About Us</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link active" href="{{url_for('playground')}}">Playground</a>
                     </div>
                 </div>
             </div>
-        </nav>
-        
-        <main>
+        </div>
+    </nav>
+
+    <main>
         <header>
             <h1 class="title">
                 Meet the <span class="gradient">machine.</span>
@@ -54,50 +48,56 @@
                 Generate your own medieval fantasy characters with personality traits, backstories, and descriptions!
             </p>
         </header>
-        
-        </main>
-        <div class="spacing">
-            <div class = "long-box">
-                <div class = "left-box">
-                    <h4> Choose Character Features </h4>
-                    <form action="{{url_for('playground')}}" method="POST">
-                        <select name="generate-type" id="generate-type" action="/">
-                            <option value="backstory">Backstory</option>
-                            <option value="physical">Physical Description</option>
-                            <option value="personality">Personality Traits</option>
-                        </select>
-                        <br><br>
-                        <div class="tooltip"><h4>Variety</h4>
-                            <span class="tooltiptext">For best results, set to 100.</span>
-                        </div>
-                        <br>
-                        <input name='randomness' type="range" style="width: 50%;" min="1" max="100" class="range" id="range">
-                        <p class='slider-label'><span id="demo"></span></p>
-                        <h4>Prompt</h4>
-                        <textarea class="button button-secondary"name='user-prompt' style="width: 100%;" ></textarea>
-                        <div class='button-wrapper'>
-                            <input name='Generate' type='submit' class="button"></input>
-                        </div>
-                    </form>
+
+    </main>
+    <div class="spacing">
+        <form action="{{url_for('playground')}}" method="POST">
+            <div class="long-box">
+
+
+                <div class="left-box">
+                    <h3> Choose Character Features </h3>
+
+                    <select name="generate-type" id="generate-type" action="/">
+                        <option value="backstory">Backstory</option>
+                        <option value="physical">Physical Description</option>
+                        <option value="personality">Personality Traits</option>
+                    </select>
+                    <br><br>
+                    <input name='randomness' type="range" style="width: 50%;" min="1" max="100" class="range"
+                        id="range">
+                    <p class='slider-label'><span id="demo"></span></p>
+                    <h3>Prompt</h3>
+                    <textarea class="button button-secondary" name='user-prompt' style="width: 100%;"></textarea>
+
                 </div>
-                <div class = "right-box">
-                    <h4> Your Character Will Appear Below </h4>
+
+
+
+
+                <div class="right-box">
+                    <h3> Your Character Will Appear Below </h3>
                     <hr>
                     {% for i in  output %}
-                        <p>{{i}}</p>
+                    <p>{{i}}</p>
                     {%endfor%}
                 </div>
             </div>
-        </div>
-        <script>
-            var slider = document.getElementById("range");
-            var output = document.getElementById("demo");
-            output.innerHTML = slider.value;
-            
-            slider.oninput = function() {
-              output.innerHTML = this.value;
-            }
-        </script>
-    </body>
-</html>
+        
+    </div>
+    <div class='button-wrapper'>
+        <input name='Generate' type='submit' class="button"></input>
+    </div>
+    </form>
+    <script>
+        var slider = document.getElementById("range");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
 
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+
+</html>
