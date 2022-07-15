@@ -1,4 +1,4 @@
-#RPG-GENERATOR
+# RPG-GENERATOR
 # About the Team
 # How to Use
 # Techical Stack
