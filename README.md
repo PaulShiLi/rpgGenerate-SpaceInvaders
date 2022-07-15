@@ -4,17 +4,17 @@ This is the official github repo of the Space Invaders RPG Generator Project.
 ## About the Team
 We are a passionate team of high school students interested in computer science and artificial intelligence.
 
-Paul is a rising senior in Westlake Highschool at Westlake Village, California. Some of the hobbies that he loves include playing music, cybersecurity, and programming. He enjoyed partaking in the development of the AIs that were used for this project and in addition, all of the website development was really fun with the team.
+* Paul is a rising senior in Westlake Highschool at Westlake Village, California. Some of the hobbies that he loves include playing music, cybersecurity, and programming. He enjoyed partaking in the development of the AIs that were used for this project and in addition, all of the website development was really fun with the team.
 
-Julian is a rising junior with a passion for the future of technology. Bringing his experience from his work at Cloaks+, he primarily worked on front end: envisioning and developing the website's design and implementation.
+* Julian is a rising junior with a passion for the future of technology. Bringing his experience from his work at Cloaks+, he primarily worked on front end: envisioning and developing the website's design and implementation.
 
-Kacper is a rising senior with a passion for computer science and math. He primarily worked on the back-end of the code, but also helped bring the front-end to life. In his free time he loves to program and play video games with his friends.
+* Kacper is a rising senior with a passion for computer science and math. He primarily worked on the back-end of the code, but also helped bring the front-end to life. In his free time he loves to program and play video games with his friends.
 
-Nina is a rising senior from California. She has a passion for music, video games, and movies. She mostly worked on the front end of Nexus.
+* Nina is a rising senior from California. She has a passion for music, video games, and movies. She mostly worked on the front end of Nexus.
 
-Rifat is a rising senior in high school from Connecticut. He enjoys coding, playing soccer and basketball, playing video games, and watching movies. He primarily worked on the website's front-end. His favorite part about this project was being able to work as a team to learn and create an AI product.
+* Rifat is a rising senior in high school from Connecticut. He enjoys coding, playing soccer and basketball, playing video games, and watching movies. He primarily worked on the website's front-end. His favorite part about this project was being able to work as a team to learn and create an AI product.
 
-Charlie is a rising junior that lives in New Jersey. He enjoys D&D, and brought some of these ideas to the AI Camp project. He worked on the personality trait dataset and model, as well as the front-end and back-end for the generation page.
+* Charlie is a rising junior that lives in New Jersey. He enjoys D&D, and brought some of these ideas to the AI Camp project. He worked on the personality trait dataset and model, as well as the front-end and back-end for the generation page.
 ## How to Use
 Visit our website
 Go to the "Playground" page
