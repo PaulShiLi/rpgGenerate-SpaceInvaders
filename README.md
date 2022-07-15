@@ -1,4 +1,4 @@
-# RPG-GENERATOR / <br />
+# RPG-GENERATOR <br />
 This is the official github repo of the Space Invaders RPG Generator Project.
 
 ## About the Team
