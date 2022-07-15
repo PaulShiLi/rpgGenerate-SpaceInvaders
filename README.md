@@ -40,4 +40,5 @@ Distil GPT-2
 * Natural Language Toolkit (NLTK)
 
 </br>
-If the model folder isn't working, please download the models in this [google drive link](https://drive.google.com/drive/folders/1Onvqh1pKDQoMV5rYZjzd6iTxD5HQ0MUn?usp=sharing)
+If the model folder isn't working, please download the models in this google drive link
+https://drive.google.com/drive/folders/1Onvqh1pKDQoMV5rYZjzd6iTxD5HQ0MUn?usp=sharing
